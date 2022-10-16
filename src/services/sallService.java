@@ -33,10 +33,10 @@ public class sallService {
             ste.setString(1, s.getMatricule());
             ste.setString(2, s.getNom());
             ste.setString(3, s.getCnss());
-            ste.setString(4, s.getDateNaissance());
+            ste.setDate(4, s.getDateNaissance());
             ste.setString(5, s.getSbase());
             ste.setString(6, s.getLibelle());
-            ste.setString(7, s.getDateRec());
+            ste.setDate(7, s.getDateRec());
             ste.setString(8, s.getEffet1());
             ste.setString(9, s.getEffet2());
             ste.setString(10, s.getService());
@@ -73,10 +73,10 @@ public class sallService {
                 s.setMatricule(rs.getString("Matricule"));
                 s.setNom(rs.getString("Nom"));
                 s.setCnss(rs.getString("CNSS"));
-                s.setDateNaissance(rs.getString("DateNaissance"));
+                s.setDateNaissance(rs.getDate("DateNaissance"));
                 s.setSbase(rs.getString("Sbase"));
                 s.setLibelle(rs.getString("Libelle"));
-                s.setDateRec(rs.getString("DateRec"));
+                s.setDateRec(rs.getDate("DateRec"));
                 s.setEffet1(rs.getString("Effet1"));
                 s.setEffet2(rs.getString("Effet2"));
                 s.setService(rs.getString("Service"));
@@ -97,10 +97,10 @@ public class sallService {
             PreparedStatement ste = conn.prepareStatement(sql);
             ste.setString(1, s.getMatricule());
             ste.setString(3, s.getCnss());
-            ste.setString(4, s.getDateNaissance());
+            ste.setDate(4, s.getDateNaissance());
             ste.setString(5, s.getSbase());
             ste.setString(6, s.getLibelle());
-            ste.setString(7, s.getDateRec());
+            ste.setDate(7, s.getDateRec());
             ste.setString(8, s.getEffet1());
             ste.setString(9, s.getEffet2());
             ste.setString(10, s.getService());

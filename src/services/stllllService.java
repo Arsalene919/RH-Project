@@ -32,10 +32,10 @@ public class stllllService {
             ste.setString(1, stl.getMatricule());
             ste.setString(2, stl.getNom());
             ste.setString(3, stl.getCnss());
-            ste.setString(4, stl.getDateNaissance());
+            ste.setDate(4, stl.getDateNaissance());
             ste.setString(5, stl.getSbase());
             ste.setString(6, stl.getLibelle());
-            ste.setString(7, stl.getDateRec());
+            ste.setDate(7, stl.getDateRec());
             ste.setString(8, stl.getEffet1());
             ste.setString(9, stl.getEffet2());
             ste.setString(10, stl.getService());
@@ -72,10 +72,10 @@ public class stllllService {
                 stl.setMatricule(rs.getString("Matricule"));
                 stl.setNom(rs.getString("Nom"));
                 stl.setCnss(rs.getString("CNSS"));
-                stl.setDateNaissance(rs.getString("DateNaissance"));
+                stl.setDateNaissance(rs.getDate("DateNaissance"));
                 stl.setSbase(rs.getString("Sbase"));
                 stl.setLibelle(rs.getString("Libelle"));
-                stl.setDateRec(rs.getString("DateRec"));
+                stl.setDateRec(rs.getDate("DateRec"));
                 stl.setEffet1(rs.getString("Effet1"));
                 stl.setEffet2(rs.getString("Effet2"));
                 stl.setService(rs.getString("Service"));
@@ -96,10 +96,10 @@ public class stllllService {
             PreparedStatement ste = conn.prepareStatement(sql);
             ste.setString(1, stl.getMatricule());
             ste.setString(3, stl.getCnss());
-            ste.setString(4, stl.getDateNaissance());
+            ste.setDate(4, stl.getDateNaissance());
             ste.setString(5, stl.getSbase());
             ste.setString(6, stl.getLibelle());
-            ste.setString(7, stl.getDateRec());
+            ste.setDate(7, stl.getDateRec());
             ste.setString(8, stl.getEffet1());
             ste.setString(9, stl.getEffet2());
             ste.setString(10, stl.getService());

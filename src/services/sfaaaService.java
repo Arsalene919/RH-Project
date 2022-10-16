@@ -32,10 +32,10 @@ public class sfaaaService {
             ste.setString(1, sf.getMatricule());
             ste.setString(2, sf.getNom());
             ste.setString(3, sf.getCnss());
-            ste.setString(4, sf.getDateNaissance());
+            ste.setDate(4, sf.getDateNaissance());
             ste.setString(5, sf.getSbase());
             ste.setString(6, sf.getLibelle());
-            ste.setString(7, sf.getDateRec());
+            ste.setDate(7, sf.getDateRec());
             ste.setString(8, sf.getEffet1());
             ste.setString(9, sf.getEffet2());
             ste.setString(10, sf.getService());
@@ -72,10 +72,10 @@ public class sfaaaService {
                 sf.setMatricule(rs.getString("Matricule"));
                 sf.setNom(rs.getString("Nom"));
                 sf.setCnss(rs.getString("CNSS"));
-                sf.setDateNaissance(rs.getString("DateNaissance"));
+                sf.setDateNaissance(rs.getDate("DateNaissance"));
                 sf.setSbase(rs.getString("Sbase"));
                 sf.setLibelle(rs.getString("Libelle"));
-                sf.setDateRec(rs.getString("DateRec"));
+                sf.setDateRec(rs.getDate("DateRec"));
                 sf.setEffet1(rs.getString("Effet1"));
                 sf.setEffet2(rs.getString("Effet2"));
                 sf.setService(rs.getString("Service"));
@@ -96,10 +96,10 @@ public class sfaaaService {
             PreparedStatement ste = conn.prepareStatement(sql);
             ste.setString(1, sf.getMatricule());
             ste.setString(3, sf.getCnss());
-            ste.setString(4, sf.getDateNaissance());
+            ste.setDate(4, sf.getDateNaissance());
             ste.setString(5, sf.getSbase());
             ste.setString(6, sf.getLibelle());
-            ste.setString(7, sf.getDateRec());
+            ste.setDate(7, sf.getDateRec());
             ste.setString(8, sf.getEffet1());
             ste.setString(9, sf.getEffet2());
             ste.setString(10, sf.getService());

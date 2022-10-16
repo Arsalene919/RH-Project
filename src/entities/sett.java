@@ -5,28 +5,30 @@
  */
 package entities;
 
+import java.sql.Date;
+
 /**
  *
  * @author Khach
  */
 public class sett {
-    public String Matricule, Nom, Cnss, DateNaissance, Sbase, Libelle,
-            DateRec, Effet1, Effet2, Service, CIN;
+    public String Matricule, Nom, Cnss, Sbase, Libelle,
+             Service, CIN;
+    public Date DateNaissance,DateRec1,DateRec2;
     
     public sett(){
         
     }
 
-    public sett(String Matricule, String Nom, String Cnss, String DateNaissance, String Sbase, String Libelle, String DateRec, String Effet1, String Effet2, String Service, String CIN) {
+    public sett(String Matricule, String Nom, String Cnss, Date DateNaissance, String Sbase, String Libelle, Date DateRec1, Date DateRec2, String Service, String CIN) {
         this.Matricule = Matricule;
         this.Nom = Nom;
         this.Cnss = Cnss;
         this.DateNaissance = DateNaissance;
         this.Sbase = Sbase;
         this.Libelle = Libelle;
-        this.DateRec = DateRec;
-        this.Effet1 = Effet1;
-        this.Effet2 = Effet2;
+        this.DateRec1 = DateRec1;
+        this.DateRec2 = DateRec2;
         this.Service = Service;
         this.CIN = CIN;
     }
@@ -55,11 +57,11 @@ public class sett {
         this.Cnss = Cnss;
     }
 
-    public String getDateNaissance() {
+    public Date getDateNaissance() {
         return DateNaissance;
     }
 
-    public void setDateNaissance(String DateNaissance) {
+    public void setDateNaissance(Date DateNaissance) {
         this.DateNaissance = DateNaissance;
     }
 
@@ -79,28 +81,20 @@ public class sett {
         this.Libelle = Libelle;
     }
 
-    public String getDateRec() {
-        return DateRec;
+    public Date getDateRec1() {
+        return DateRec1;
     }
 
-    public void setDateRec(String DateRec) {
-        this.DateRec = DateRec;
+    public void setDateRec1(Date DateRec) {
+        this.DateRec1 = DateRec1;
     }
 
-    public String getEffet1() {
-        return Effet1;
+    public Date getDateRec2() {
+        return DateRec2;
     }
 
-    public void setEffet1(String Effet1) {
-        this.Effet1 = Effet1;
-    }
-
-    public String getEffet2() {
-        return Effet2;
-    }
-
-    public void setEffet2(String Effet2) {
-        this.Effet2 = Effet2;
+    public void setDateRec2(Date DateRec2) {
+        this.DateRec2 = DateRec2;
     }
 
     public String getService() {
@@ -121,7 +115,7 @@ public class sett {
 
     @Override
     public String toString() {
-        return "sett{" + "Matricule=" + Matricule + ", Nom=" + Nom + ", Cnss=" + Cnss + ", DateNaissance=" + DateNaissance + ", Sbase=" + Sbase + ", Libelle=" + Libelle + ", DateRec=" + DateRec + ", Effet1=" + Effet1 + ", Effet2=" + Effet2 + ", Service=" + Service + ", CIN=" + CIN + '}';
+        return "sett{" + "Matricule=" + Matricule + ", Nom=" + Nom + ", Cnss=" + Cnss + ", DateNaissance=" + DateNaissance + ", Sbase=" + Sbase + ", Libelle=" + Libelle + ", DateRec1=" + DateRec1 + ", DateRec2=" + DateRec2 + ", Service=" + Service + ", CIN=" + CIN + '}';
     }
     
     

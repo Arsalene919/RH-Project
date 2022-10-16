@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUPController">
-    
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUPController">
+   <children>
+      <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="14.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/6333050.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="347.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom d'utilisateur">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="347.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserName" layoutX="526.0" layoutY="166.0" />
+      <TextField fx:id="txtPassword" layoutX="526.0" layoutY="242.0" />
+      <Button fx:id="btnSignup" layoutX="435.0" layoutY="343.0" mnemonicParsing="false" onAction="#Signup" prefHeight="31.0" prefWidth="135.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="SignUp" textFill="WHITE" />
+      <Text layoutX="314.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous avez deja un compte ?">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnSignIn" layoutX="570.0" layoutY="422.0" mnemonicParsing="false" onAction="#SigninPage" style="-fx-background-color: #ffffff;" text="SignIn" textFill="#3b78d3" />
+   </children>
 </AnchorPane>

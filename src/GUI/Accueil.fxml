@@ -35,10 +35,10 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="201.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Modifier" textFill="WHITE" />
-            <Button layoutX="748.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Chercher" textFill="WHITE" />
-            <Button layoutX="341.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Supprimer" textFill="WHITE" />
-            <Button layoutX="66.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Ajouter" textFill="WHITE" />
+            <Button fx:id="btnUpdate" layoutX="201.0" layoutY="240.0" mnemonicParsing="false" onAction="#ModifierPersonnel" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Modifier" textFill="WHITE" />
+            <Button fx:id="btnSearch" layoutX="748.0" layoutY="240.0" mnemonicParsing="false" onAction="#ChercherPersonnel" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Chercher" textFill="WHITE" />
+            <Button fx:id="btnDelete" layoutX="341.0" layoutY="240.0" mnemonicParsing="false" onAction="#SupprimerPersonnel" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Supprimer" textFill="WHITE" />
+            <Button fx:id="btnAdd" layoutX="66.0" layoutY="240.0" mnemonicParsing="false" onAction="#AjouterPersonnel" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Ajouter" textFill="WHITE" />
             <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="343.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../assets/delete%20(1).png" />

@@ -5,20 +5,21 @@
  */
 package entities;
 
+import java.sql.Date;
+
 /**
  *
  * @author Khach
  */
 public class sfaaa {
     
-    public String Matricule, Nom, Cnss, DateNaissance, Sbase, Libelle,
-            DateRec, Effet1, Effet2, Service, CIN;
-    
+    public String Matricule, Nom, Cnss, Sbase, Libelle, Effet1, Effet2, Service, CIN;
+    public Date DateNaissance, DateRec;
     public sfaaa(){
     
     }
 
-    public sfaaa(String Matricule, String Nom, String Cnss, String DateNaissance, String Sbase, String Libelle, String DateRec, String Effet1, String Effet2, String Service, String CIN) {
+    public sfaaa(String Matricule, String Nom, String Cnss, Date DateNaissance, String Sbase, String Libelle, Date DateRec, String Effet1, String Effet2, String Service, String CIN) {
         this.Matricule = Matricule;
         this.Nom = Nom;
         this.Cnss = Cnss;
@@ -56,11 +57,11 @@ public class sfaaa {
         this.Cnss = Cnss;
     }
 
-    public String getDateNaissance() {
+    public Date getDateNaissance() {
         return DateNaissance;
     }
 
-    public void setDateNaissance(String DateNaissance) {
+    public void setDateNaissance(Date DateNaissance) {
         this.DateNaissance = DateNaissance;
     }
 
@@ -80,11 +81,11 @@ public class sfaaa {
         this.Libelle = Libelle;
     }
 
-    public String getDateRec() {
+    public Date getDateRec() {
         return DateRec;
     }
 
-    public void setDateRec(String DateRec) {
+    public void setDateRec(Date DateRec) {
         this.DateRec = DateRec;
     }
 

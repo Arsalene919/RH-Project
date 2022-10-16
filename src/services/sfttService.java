@@ -33,10 +33,10 @@ public class sfttService {
             ste.setString(1, sft.getMatricule());
             ste.setString(2, sft.getNom());
             ste.setString(3, sft.getCnss());
-            ste.setString(4, sft.getDateNaissance());
+            ste.setDate(4, sft.getDateNaissance());
             ste.setString(5, sft.getSbase());
             ste.setString(6, sft.getLibelle());
-            ste.setString(7, sft.getDateRec());
+            ste.setDate(7, sft.getDateRec());
             ste.setString(8, sft.getEffet1());
             ste.setString(9, sft.getEffet2());
             ste.setString(10, sft.getService());
@@ -73,10 +73,10 @@ public class sfttService {
                 sft.setMatricule(rs.getString("Matricule"));
                 sft.setNom(rs.getString("Nom"));
                 sft.setCnss(rs.getString("CNSS"));
-                sft.setDateNaissance(rs.getString("DateNaissance"));
+                sft.setDateNaissance(rs.getDate("DateNaissance"));
                 sft.setSbase(rs.getString("Sbase"));
                 sft.setLibelle(rs.getString("Libelle"));
-                sft.setDateRec(rs.getString("DateRec"));
+                sft.setDateRec(rs.getDate("DateRec"));
                 sft.setEffet1(rs.getString("Effet1"));
                 sft.setEffet2(rs.getString("Effet2"));
                 sft.setService(rs.getString("Service"));
@@ -97,10 +97,10 @@ public class sfttService {
             PreparedStatement ste = conn.prepareStatement(sql);
             ste.setString(1, sft.getMatricule());
             ste.setString(3, sft.getCnss());
-            ste.setString(4, sft.getDateNaissance());
+            ste.setDate(4, sft.getDateNaissance());
             ste.setString(5, sft.getSbase());
             ste.setString(6, sft.getLibelle());
-            ste.setString(7, sft.getDateRec());
+            ste.setDate(7, sft.getDateRec());
             ste.setString(8, sft.getEffet1());
             ste.setString(9, sft.getEffet2());
             ste.setString(10, sft.getService());

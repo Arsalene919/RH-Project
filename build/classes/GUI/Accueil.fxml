@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1500.0" style="-fx-background-color: f5ebe0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AccueilController">
+   <children>
+      <AnchorPane layoutX="400.0" prefHeight="750.0" prefWidth="1100.0">
+         <children>
+            <TableView fx:id="table" layoutX="66.0" layoutY="285.0" prefHeight="450.0" prefWidth="1000.0">
+              <columns>
+                <TableColumn fx:id="txtMatricule" prefWidth="100.0" text="Matricule" />
+                <TableColumn fx:id="txtNom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="txtCnss" prefWidth="75.0" text="CNSS" />
+                  <TableColumn fx:id="txtDateNaissance" prefWidth="145.0" text="Date de naissance" />
+                  <TableColumn fx:id="txtSbase" prefWidth="130.0" text="Salaire de base" />
+                  <TableColumn fx:id="txtLibelle" prefWidth="75.0" text="Libelle" />
+                  <TableColumn fx:id="txtDateRec" prefWidth="100.0" text="Date Rec" />
+                  <TableColumn fx:id="txtEffet1" prefWidth="75.0" text="Effet 1" />
+                  <TableColumn fx:id="txtEffet2" prefWidth="75.0" text="Effet 2" />
+                  <TableColumn fx:id="txtService" prefWidth="75.0" text="Service" />
+                  <TableColumn fx:id="txtCin" prefWidth="75.0" text="CIN" />
+              </columns>
+            </TableView>
+            <TextField layoutX="858.0" layoutY="240.0" prefHeight="31.0" prefWidth="208.0" />
+            <Button fx:id="ExitButton" layoutX="1057.0" layoutY="1.0" mnemonicParsing="false" style="-fx-background-color: f5ebe0;" text="X">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="201.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Modifier" textFill="WHITE" />
+            <Button layoutX="748.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Chercher" textFill="WHITE" />
+            <Button layoutX="341.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Supprimer" textFill="WHITE" />
+            <Button layoutX="66.0" layoutY="240.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Ajouter" textFill="WHITE" />
+            <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="343.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/delete%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="208.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/edit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="72.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="20.0" layoutX="754.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/search-interface-symbol.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="750.0" prefWidth="400.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button fx:id="btnBcfff" layoutX="85.0" layoutY="240.0" mnemonicParsing="false" onAction="#AfficherBcfff" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="BCFFF" textFill="WHITE" />
+            <Text layoutX="60.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Groupe Rouleau Guichard SET" textAlignment="CENTER">
+               <font>
+                  <Font name="Century" size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnSall" layoutX="85.0" layoutY="291.0" mnemonicParsing="false" onAction="#AfficherSall" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="SALL" textFill="WHITE" />
+            <Button fx:id="btnSett" layoutX="85.0" layoutY="344.0" mnemonicParsing="false" onAction="#AfficherSett" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="SETT" textFill="WHITE" />
+            <Button fx:id="btnSfaaa" layoutX="85.0" layoutY="392.0" mnemonicParsing="false" onAction="#AfficherSfaaa" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="SFAAA" textFill="WHITE" />
+            <Button fx:id="btnSftt" layoutX="85.0" layoutY="443.0" mnemonicParsing="false" onAction="#AfficherSftt" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="SFTT" textFill="WHITE" />
+            <Button fx:id="btnStllll" layoutX="85.0" layoutY="488.0" mnemonicParsing="false" onAction="#AfficherStllll" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="STLLLL" textFill="WHITE" />
+            <Button layoutX="85.0" layoutY="542.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" style="-fx-background-color: #023047; -fx-background-radius: 0 0 0 0;" text="Statistiques" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -48,6 +48,10 @@ public class bcfff {
 
     }
 
+    public bcfff(String matricule, String text, String text0, String text1, String text2, Date date, String text3, String text4, Date date0, String text5, String text6, String text7) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public String getMatricule() {
         return Matricule;
     }

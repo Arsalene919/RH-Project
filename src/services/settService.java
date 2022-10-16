@@ -27,18 +27,17 @@ public class settService {
     }
     
     public int ajoutSett(sett st){
-        String sql = "INSERT INTO `sett___a`(`Matricule`, `Nom`, `CNSS`, `DateNaissance`, `Sbase`, `Libelle`, `DateRec`, `Effet1`, `Effet2`, `Service`, `CIN`) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO `sett___a`(`Matricule`, `Nom`, `CNSS`, `DateNaissance`, `Sbase`, `Libelle`, `DateRec1`, `DateRec2`, `Service`, `CIN`) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement ste = conn.prepareStatement(sql);
             ste.setString(1, st.getMatricule());
             ste.setString(2, st.getNom());
             ste.setString(3, st.getCnss());
-            ste.setString(4, st.getDateNaissance());
+            ste.setDate(4, st.getDateNaissance());
             ste.setString(5, st.getSbase());
             ste.setString(6, st.getLibelle());
-            ste.setString(7, st.getDateRec());
-            ste.setString(8, st.getEffet1());
-            ste.setString(9, st.getEffet2());
+            ste.setDate(7, st.getDateRec1());
+            ste.setDate(8, st.getDateRec2());
             ste.setString(10, st.getService());
             ste.setString(11, st.getCIN());
 
@@ -73,12 +72,11 @@ public class settService {
                 st.setMatricule(rs.getString("Matricule"));
                 st.setNom(rs.getString("Nom"));
                 st.setCnss(rs.getString("CNSS"));
-                st.setDateNaissance(rs.getString("DateNaissance"));
+                st.setDateNaissance(rs.getDate("DateNaissance"));
                 st.setSbase(rs.getString("Sbase"));
                 st.setLibelle(rs.getString("Libelle"));
-                st.setDateRec(rs.getString("DateRec"));
-                st.setEffet1(rs.getString("Effet1"));
-                st.setEffet2(rs.getString("Effet2"));
+                st.setDateRec1(rs.getDate("DateRec1"));
+                st.setDateRec2(rs.getDate("DateRec2"));
                 st.setService(rs.getString("Service"));
                 st.setCIN(rs.getString("CIN"));
 
@@ -97,12 +95,11 @@ public class settService {
             PreparedStatement ste = conn.prepareStatement(sql);
             ste.setString(1, st.getMatricule());
             ste.setString(3, st.getCnss());
-            ste.setString(4, st.getDateNaissance());
+            ste.setDate(4, st.getDateNaissance());
             ste.setString(5, st.getSbase());
             ste.setString(6, st.getLibelle());
-            ste.setString(7, st.getDateRec());
-            ste.setString(8, st.getEffet1());
-            ste.setString(9, st.getEffet2());
+            ste.setDate(7, st.getDateRec1());
+            ste.setDate(8, st.getDateRec2());
             ste.setString(10, st.getService());
             ste.setString(11, st.getCIN());
             ste.setString(2, Matricule);
